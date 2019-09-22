@@ -5,9 +5,6 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 export default StyleSheet.create({
-	scrollView: {
-		backgroundColor: Colors.lighter,
-	},
 	engine: {
 		position: 'absolute',
 		right: 0,
