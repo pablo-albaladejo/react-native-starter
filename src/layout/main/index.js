@@ -4,21 +4,23 @@ import {
   ScrollView,
   StatusBar,
 } from 'react-native';
+
 import PropTypes from 'prop-types';
 import styles from './styles';
 
 const MainLayout = ({ children }) => (
   <Fragment>
-    <StatusBar barStyle="dark-content" />
-    <SafeAreaView>
+    <StatusBar />
+    <SafeAreaView
+      style={styles.container}>
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
-        style={styles.scrollView}
+        contentContainerStyle={styles.content}
       >
         {children}
       </ScrollView>
     </SafeAreaView>
-  </Fragment>
+  </Fragment >
 );
 
 MainLayout.propTypes = {
