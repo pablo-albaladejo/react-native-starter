@@ -1,6 +1,6 @@
 
 import { createSwitchNavigator } from 'react-navigation';
-import LoginScreen from '../screens/auth/login';
+import LoginScreen from '../screens/login';
 
 const AuthStack =
   createSwitchNavigator(
