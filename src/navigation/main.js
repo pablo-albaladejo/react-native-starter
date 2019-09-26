@@ -1,7 +1,3 @@
-import React from 'react';
-import { Platform } from 'react-native';
-import PropTypes from 'prop-types';
-
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
@@ -10,7 +6,7 @@ import SecondaryScreen from '../screens/secondary';
 import SettingsScreen from '../screens/settings';
 import { navigationOptions } from './config';
 
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import * as IconHelper from '../helpers/icons';
 
 const HomeStack = createStackNavigator({
   Main: {
@@ -38,35 +34,18 @@ const SettingsStack = createStackNavigator({
 });
 SettingsStack.navigationOptions = navigationOptions;
 
-
-const HomeIcon = ({ tintColor }) => {
-  const prefix = Platform.OS === 'ios' ? 'ios' : 'md';
-  return <Ionicons name={prefix + '-home'} size={25} color={tintColor} />;
-}
-HomeIcon.propTypes = {
-  tintColor: PropTypes.string,
-}
-
-const SettingsIcon = ({ tintColor }) => {
-  const prefix = Platform.OS === 'ios' ? 'ios' : 'md';
-  return <Ionicons name={prefix + '-settings'} size={25} color={tintColor} />;
-}
-SettingsIcon.propTypes = {
-  tintColor: PropTypes.string,
-}
-
 const MainStack = createBottomTabNavigator(
   {
     Home: {
       screen: HomeStack,
       navigationOptions: {
-        tabBarIcon: HomeIcon,
+        tabBarIcon: ({tintColor}) => IconHelper.getIcon('home', tintColor),
       }
     },
     Settings: {
       screen: SettingsStack,
       navigationOptions: {
-        tabBarIcon: SettingsIcon,
+        tabBarIcon: ({tintColor}) => IconHelper.getIcon('settings', tintColor),
       }
     }
   }

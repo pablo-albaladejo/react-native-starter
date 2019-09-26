@@ -3,9 +3,9 @@ import React from 'react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import rootReducer from './reducers';
+import rootReducer from '../redux/reducers';
 
-import Navigation from './navigation';
+import Navigation from '../navigation';
 
 const store = createStore(
   rootReducer,
