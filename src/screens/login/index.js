@@ -9,10 +9,18 @@ import PropTypes from 'prop-types';
 
 import styles from './styles';
 import MainLayout from '../../layout/main';
+import { TextInput } from 'react-native-gesture-handler';
+
+import * as IconHelper from '../../helpers/icons';
 
 class LoginScreen extends Component {
 
-  navigate = () => {
+  state = {
+    username: null,
+    password: null,
+  }
+
+  onLoginPress = () => {
     this.props.navigation.navigate('Main');
   }
 
@@ -20,7 +28,29 @@ class LoginScreen extends Component {
     return (
       <MainLayout>
         <View style={styles.container}>
-          <TouchableOpacity onPress={this.navigate}>
+
+          <View style={styles.input}>
+            <View style={styles.icon}>
+              {IconHelper.getIcon('person', 'blue')}
+            </View>
+            <TextInput
+              placeholder={'username'}
+              onChangeText={(text) => { this.setState({ username: text }) }}
+            />
+          </View>
+
+          <View style={styles.input}>
+            <View style={styles.icon}>
+              {IconHelper.getIcon('lock', 'blue')}
+            </View>
+            <TextInput
+              secureTextEntry={true}
+              placeholder={'passwrod'}
+              onChangeText={(text) => { this.setState({ password: text }) }}
+            />
+          </View>
+
+          <TouchableOpacity onPress={this.onLoginPress}>
             <Text>{'Login'}</Text>
           </TouchableOpacity>
         </View>
