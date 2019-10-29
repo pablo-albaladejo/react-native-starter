@@ -1,36 +1,14 @@
-import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
+import { connect } from 'react-redux'
 
-import PropTypes from 'prop-types';
+import SettingsScreen from './stateless';
+import { userLogout } from '../../redux/actions/auth';
 
-import styles from './styles';
-import MainLayout from '../../layout/main';
+const mapStateToProps = () => ({
 
-class SettingsScreen extends Component {
+});
 
-  navigate = () => {
-    this.props.navigation.navigate('Secondary', { title: 'Secondary' });
-  }
+const mapDispatchToProps = dispatch => ({
+  userLogout: () => dispatch(userLogout())
+});
 
-  render() {
-    return (
-      <MainLayout>
-        <View style={styles.container}>
-          <TouchableOpacity onPress={this.navigate}>
-            <Text>{'Settings'}</Text>
-          </TouchableOpacity>
-        </View>
-      </MainLayout>
-    )
-  }
-}
-
-SettingsScreen.propTypes = {
-  navigation: PropTypes.object,
-}
-
-export default SettingsScreen;
+export default connect(mapStateToProps, mapDispatchToProps)(SettingsScreen)

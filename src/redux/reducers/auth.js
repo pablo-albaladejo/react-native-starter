@@ -11,6 +11,7 @@ export default function auth(state = initialState, { type, payload }) {
         ...state,
         jwt: payload.jwt
       }
+
     default:
       return state;
   }
