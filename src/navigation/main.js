@@ -34,6 +34,11 @@ const SettingsStack = createStackNavigator({
 });
 SettingsStack.navigationOptions = navigationOptions;
 
+//TO BE REMOVED
+//https://stackoverflow.com/a/57751055/3395884
+import { YellowBox } from 'react-native';
+YellowBox.ignoreWarnings(['Warning: componentWillMount']);
+
 const MainStack = createBottomTabNavigator(
   {
     Home: {
