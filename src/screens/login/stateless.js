@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import {
   View,
-  Text,
-  TouchableOpacity,
 } from 'react-native';
 
 import PropTypes from 'prop-types';
@@ -12,6 +10,7 @@ import MainLayout from '../../layouts/main';
 import { TextInput } from 'react-native-gesture-handler';
 
 import * as IconHelper from '../../helpers/icons';
+import BasicButton from '../../components/inputs/BasicButton';
 
 class LoginScreen extends Component {
 
@@ -50,9 +49,11 @@ class LoginScreen extends Component {
             />
           </View>
 
-          <TouchableOpacity onPress={this.onLoginPress}>
-            <Text>{'Login'}</Text>
-          </TouchableOpacity>
+          <BasicButton
+            caption={'Login'}
+            onPress={this.onLoginPress}
+          />
+
         </View>
       </MainLayout>
     )

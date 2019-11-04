@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import {
   View,
-  Text,
-  TouchableOpacity,
 } from 'react-native';
 
 import PropTypes from 'prop-types';
 
 import styles from './styles';
 import MainLayout from '../../layouts/main';
+import BasicButton from '../../components/inputs/BasicButton';
 
 class SecondaryScreen extends Component {
 
@@ -26,9 +25,10 @@ class SecondaryScreen extends Component {
     return (
       <MainLayout>
         <View style={styles.container}>
-          <TouchableOpacity onPress={this.navigate}>
-            <Text>{'Back'}</Text>
-          </TouchableOpacity>
+          <BasicButton
+            caption={'Back'}
+            onPress={this.navigate}
+          />
         </View>
       </MainLayout>
     )

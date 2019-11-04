@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import {
   View,
-  Text,
-  TouchableOpacity,
 } from 'react-native';
 
 import PropTypes from 'prop-types';
@@ -10,6 +8,7 @@ import PropTypes from 'prop-types';
 import styles from './styles';
 import MainLayout from '../../layouts/main';
 import { MODAL_TYPES } from '../../components/ui/Modal/types';
+import BasicButton from '../../components/inputs/BasicButton';
 
 class MainScreen extends Component {
 
@@ -34,13 +33,15 @@ class MainScreen extends Component {
       <MainLayout>
         <View style={styles.container}>
 
-          <TouchableOpacity onPress={this.navigate}>
-            <Text>{'Navigate'}</Text>
-          </TouchableOpacity>
+          <BasicButton
+            caption={'Navigate'}
+            onPress={this.navigate}
+          />
 
-          <TouchableOpacity onPress={this.showModal}>
-            <Text>{'Modal'}</Text>
-          </TouchableOpacity>
+          <BasicButton
+            caption={'Modal'}
+            onPress={this.showModal}
+          />
 
         </View>
       </MainLayout>

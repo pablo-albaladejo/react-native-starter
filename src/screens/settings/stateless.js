@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import {
   View,
-  Text,
-  TouchableOpacity,
 } from 'react-native';
 
 import PropTypes from 'prop-types';
 
 import styles from './styles';
 import MainLayout from '../../layouts/main';
+import BasicButton from '../../components/inputs/BasicButton';
 
 class SettingsScreen extends Component {
 
@@ -20,9 +19,10 @@ class SettingsScreen extends Component {
     return (
       <MainLayout>
         <View style={styles.container}>
-          <TouchableOpacity onPress={this.navigate}>
-            <Text>{'Logout'}</Text>
-          </TouchableOpacity>
+          <BasicButton
+            caption={'Logout'}
+            onPress={this.navigate}
+          />
         </View>
       </MainLayout>
     )

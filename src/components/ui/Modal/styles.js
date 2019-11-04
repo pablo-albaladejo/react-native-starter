@@ -46,7 +46,6 @@ export default StyleSheet.create({
 
   button: {
     flex: 1,
-    margin: 8
   }
 
 })
