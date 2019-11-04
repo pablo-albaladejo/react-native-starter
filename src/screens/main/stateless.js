@@ -8,7 +8,8 @@ import {
 import PropTypes from 'prop-types';
 
 import styles from './styles';
-import MainLayout from '../../layout/main';
+import MainLayout from '../../layouts/main';
+import { MODAL_TYPES } from '../../components/ui/Modal/types';
 
 class MainScreen extends Component {
 
@@ -18,8 +19,14 @@ class MainScreen extends Component {
 
   showModal = () => {
     this.props.onModalOpen(
-      'Dialog',
-      {text: 'This is a modal'});
+      MODAL_TYPES.DIALOG,
+      {
+        title: 'This is a title',
+        text: 'This is a text',
+        onSubmit: () => console.log('submit'),
+        onClose: () => console.log('close'),
+      }
+    );
   }
 
   render() {
@@ -43,6 +50,7 @@ class MainScreen extends Component {
 
 MainScreen.propTypes = {
   navigation: PropTypes.object,
+  onModalOpen: PropTypes.func
 }
 
 export default MainScreen;
