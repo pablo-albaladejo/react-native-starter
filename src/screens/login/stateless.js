@@ -11,6 +11,7 @@ import { TextInput } from 'react-native-gesture-handler';
 
 import * as IconHelper from '../../helpers/icons';
 import BasicButton from '../../components/inputs/BasicButton';
+import { Pallete, STYLE_LEVEL } from '../../styles';
 
 class LoginScreen extends Component {
 
@@ -30,7 +31,7 @@ class LoginScreen extends Component {
 
           <View style={styles.input}>
             <View style={styles.icon}>
-              {IconHelper.getIcon('person', 'blue')}
+              {IconHelper.getIcon('person', Pallete[STYLE_LEVEL.PRIMARY])}
             </View>
             <TextInput
               placeholder={'username'}
@@ -40,7 +41,7 @@ class LoginScreen extends Component {
 
           <View style={styles.input}>
             <View style={styles.icon}>
-              {IconHelper.getIcon('lock', 'blue')}
+              {IconHelper.getIcon('lock', Pallete[STYLE_LEVEL.PRIMARY])}
             </View>
             <TextInput
               secureTextEntry={true}

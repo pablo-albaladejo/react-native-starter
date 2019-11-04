@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import MainScreen from '../screens/main';
 import SecondaryScreen from '../screens/secondary';
 import SettingsScreen from '../screens/settings';
-import { navigationOptions } from './config';
+import { navigationOptions, bottomTabNavigatorConfig } from './config';
 
 import * as IconHelper from '../helpers/icons';
 
@@ -44,15 +44,16 @@ const MainStack = createBottomTabNavigator(
     Home: {
       screen: HomeStack,
       navigationOptions: {
-        tabBarIcon: ({tintColor}) => IconHelper.getIcon('home', tintColor),
+        tabBarIcon: ({ tintColor }) => IconHelper.getIcon('home', tintColor),
       }
     },
     Settings: {
       screen: SettingsStack,
       navigationOptions: {
-        tabBarIcon: ({tintColor}) => IconHelper.getIcon('settings', tintColor),
+        tabBarIcon: ({ tintColor }) => IconHelper.getIcon('settings', tintColor),
       }
     }
-  }
+  },
+  bottomTabNavigatorConfig
 )
 export default MainStack;
