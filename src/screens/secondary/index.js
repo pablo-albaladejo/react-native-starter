@@ -8,7 +8,7 @@ import {
 import PropTypes from 'prop-types';
 
 import styles from './styles';
-import MainLayout from '../../layout/main';
+import MainLayout from '../../layouts/main';
 
 class SecondaryScreen extends Component {
 

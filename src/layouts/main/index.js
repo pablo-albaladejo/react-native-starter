@@ -5,6 +5,8 @@ import {
   StatusBar,
 } from 'react-native';
 
+import Modal from '../../components/ui/Modal';
+
 import PropTypes from 'prop-types';
 import styles from './styles';
 
@@ -19,6 +21,7 @@ const MainLayout = ({ children }) => (
       >
         {children}
       </ScrollView>
+      <Modal />
     </SafeAreaView>
   </Fragment >
 );

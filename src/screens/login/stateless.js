@@ -8,7 +8,7 @@ import {
 import PropTypes from 'prop-types';
 
 import styles from './styles';
-import MainLayout from '../../layout/main';
+import MainLayout from '../../layouts/main';
 import { TextInput } from 'react-native-gesture-handler';
 
 import * as IconHelper from '../../helpers/icons';
