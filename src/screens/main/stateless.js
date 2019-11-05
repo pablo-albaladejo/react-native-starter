@@ -28,6 +28,15 @@ class MainScreen extends Component {
     );
   }
 
+  showToast = () => {
+    this.props.onToastOpen(
+      {
+        text: 'This is a toast',
+        onClose: () => console.log('close'),
+      }
+    );
+  }
+
   render() {
     return (
       <MainLayout>
@@ -43,6 +52,10 @@ class MainScreen extends Component {
             onPress={this.showModal}
           />
 
+          <BasicButton
+            caption={'Toast'}
+            onPress={this.showToast}
+          />
         </View>
       </MainLayout>
     )
@@ -51,7 +64,8 @@ class MainScreen extends Component {
 
 MainScreen.propTypes = {
   navigation: PropTypes.object,
-  onModalOpen: PropTypes.func
+  onModalOpen: PropTypes.func,
+  onToastOpen: PropTypes.func
 }
 
 export default MainScreen;

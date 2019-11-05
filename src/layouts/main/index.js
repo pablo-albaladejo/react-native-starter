@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 
 import Modal from '../../components/ui/Modal';
+import Toast from '../../components/ui/Toast';
 
 import PropTypes from 'prop-types';
 import styles from './styles';
@@ -22,6 +23,7 @@ const MainLayout = ({ children }) => (
         {children}
       </ScrollView>
       <Modal />
+      <Toast />
     </SafeAreaView>
   </Fragment >
 );

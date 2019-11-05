@@ -61,4 +61,7 @@ export const GlobalStyles = {
     borderRadius: 8,
     width: '84%',
   },
+  toast:{
+    width: '100%',
+  }
 }

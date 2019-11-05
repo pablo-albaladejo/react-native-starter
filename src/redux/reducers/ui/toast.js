@@ -1,18 +1,18 @@
-import { ON_MODAL_OPEN, ON_MODAL_CLOSE } from '../../actions/ui/modal'
+import { ON_TOAST_OPEN, ON_TOAST_CLOSE } from '../../actions/ui/toast'
 
 const initialState = {
   visible: false,
   data: {}
 };
 
-export default function modal(state = initialState, { type, payload }) {
+export default function toast(state = initialState, { type, payload }) {
   switch (type) {
-    case ON_MODAL_OPEN:
+    case ON_TOAST_OPEN:
       return {
         ...state,
         ...payload,
       };
-    case ON_MODAL_CLOSE:
+    case ON_TOAST_CLOSE:
       return initialState;
 
     default:
