@@ -7,9 +7,11 @@ import {
 
 import Modal from '../../components/ui/Modal';
 import Toast from '../../components/ui/Toast';
+import Loading from '../../components/ui/Loading';
 
 import PropTypes from 'prop-types';
 import styles from './styles';
+
 
 const MainLayout = ({ children }) => (
   <Fragment>
@@ -24,6 +26,7 @@ const MainLayout = ({ children }) => (
       </ScrollView>
       <Modal />
       <Toast />
+      <Loading />
     </SafeAreaView>
   </Fragment >
 );

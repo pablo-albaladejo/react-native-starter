@@ -32,7 +32,8 @@ export const Colors = {
   green: '#4dbd74',
   yellow: '#ffc107',
   red: '#f86c6b',
-  purple52: 'rgba(32, 25, 27, 0.52)'
+  purple52: 'rgba(32, 25, 27, 0.52)',
+  purple72: 'rgba(32, 25, 27, 0.72)'
 }
 
 export const Pallete = {
@@ -53,7 +54,7 @@ export const GlobalStyles = {
   },
   main: {
     backgroundColor: Colors.white,
-    fade: Colors.purple52
+    fade: Colors.purple72
   },
   modal: {
     padding: 8,
