@@ -23,6 +23,13 @@ export const STYLE_LEVEL = {
 
 export const Colors = {
   white: '#ffffff',
+  white82: 'rgba(255, 255, 255, 0.82)',
+  whiteTwo: '#f1f1f1',
+  whiteThree: '#e4e4e4',
+  whiteFour: '#fafafa',
+  whiteFive: '#fbfbfb',
+  whiteSix: '#e5e5e5',
+  whiteSeven: '#dddddd',
   black: '#23282c',
   noir: '#2f353a',
   blue: '#20a8d8',
@@ -53,7 +60,8 @@ export const GlobalStyles = {
     fontSize: FONT_SIZE.P,
   },
   main: {
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.whiteThree,
+    foregroundColor: Colors.whiteFour,
     fade: Colors.purple72
   },
   modal: {
@@ -62,7 +70,17 @@ export const GlobalStyles = {
     borderRadius: 8,
     width: '84%',
   },
-  toast:{
+  toast: {
     width: '100%',
+  },
+  shadow: {
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 2,
+    elevation: 2,
   }
 }

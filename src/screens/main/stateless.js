@@ -9,6 +9,7 @@ import styles from './styles';
 import MainLayout from '../../layouts/main';
 import { MODAL_TYPES } from '../../components/ui/Modal/types';
 import BasicButton from '../../components/inputs/BasicButton';
+import Card from '../../components/containers/card';
 
 class MainScreen extends Component {
 
@@ -46,25 +47,28 @@ class MainScreen extends Component {
       <MainLayout>
         <View style={styles.container}>
 
-          <BasicButton
-            caption={'Navigate'}
-            onPress={this.navigate}
-          />
+          <Card>
+            <BasicButton
+              caption={'Navigate'}
+              onPress={this.navigate}
+            />
 
-          <BasicButton
-            caption={'TabsView'}
-            onPress={this.navigateTabsView}
-          />
+            <BasicButton
+              caption={'TabsView'}
+              onPress={this.navigateTabsView}
+            />
 
-          <BasicButton
-            caption={'Modal'}
-            onPress={this.showModal}
-          />
+            <BasicButton
+              caption={'Modal'}
+              onPress={this.showModal}
+            />
 
-          <BasicButton
-            caption={'Toast'}
-            onPress={this.showToast}
-          />
+            <BasicButton
+              caption={'Toast'}
+              onPress={this.showToast}
+            />
+          </Card>
+
         </View>
       </MainLayout>
     )

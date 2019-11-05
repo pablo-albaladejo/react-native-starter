@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { GlobalStyles } from '../../styles';
 
 export default StyleSheet.create({
 	container: {
@@ -6,5 +7,6 @@ export default StyleSheet.create({
   },
   content:{
     flexGrow: 1,
+    backgroundColor: GlobalStyles.main.backgroundColor
   }
 });

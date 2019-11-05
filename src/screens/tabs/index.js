@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { Component } from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import { Pallete, STYLE_LEVEL } from '../../styles';
@@ -11,13 +11,19 @@ const SecondRoute = () => (
   <View style={[styles.scene, { backgroundColor: Pallete[STYLE_LEVEL.SECONDARY] }]} />
 );
 
-export default class TabsScreen extends React.Component {
+export default class TabsScreen extends Component {
   state = {
     index: 0,
     routes: [
       { key: 'first', title: 'First' },
       { key: 'second', title: 'Second' },
     ],
+  };
+
+  static navigationOptions = ({ navigation }) => {
+    return {
+      title: navigation.state.params.title,
+    };
   };
 
   render() {
@@ -27,8 +33,8 @@ export default class TabsScreen extends React.Component {
           <TabBar
             {...props}
             indicatorStyle={{ backgroundColor: Pallete[STYLE_LEVEL.WARNING] }}
-            style={{ backgroundColor:  Pallete[STYLE_LEVEL.INFO] }}
-            labelStyle={{color: Pallete[STYLE_LEVEL.DANGER]}}
+            style={{ backgroundColor: Pallete[STYLE_LEVEL.INFO] }}
+            labelStyle={{ color: Pallete[STYLE_LEVEL.DANGER] }}
           />
         }
         navigationState={this.state}
