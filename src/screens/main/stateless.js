@@ -16,6 +16,10 @@ class MainScreen extends Component {
     this.props.navigation.navigate('Secondary', { title: 'Secondary' });
   }
 
+  navigateTabsView = () => {
+    this.props.navigation.navigate('Tabs', { title: 'TabsView' });
+  }
+
   showModal = () => {
     this.props.onModalOpen(
       MODAL_TYPES.DIALOG,
@@ -45,6 +49,11 @@ class MainScreen extends Component {
           <BasicButton
             caption={'Navigate'}
             onPress={this.navigate}
+          />
+
+          <BasicButton
+            caption={'TabsView'}
+            onPress={this.navigateTabsView}
           />
 
           <BasicButton

@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import MainScreen from '../screens/main';
 import SecondaryScreen from '../screens/secondary';
 import SettingsScreen from '../screens/settings';
+import TabsScreen from '../screens/tabs';
 import { navigationOptions, bottomTabNavigatorConfig } from './config';
 
 import * as IconHelper from '../helpers/icons';
@@ -18,6 +19,9 @@ const HomeStack = createStackNavigator({
   Secondary: {
     screen: SecondaryScreen,
   },
+  Tabs: {
+    screen: TabsScreen,
+  }
 });
 HomeStack.navigationOptions = navigationOptions;
 
