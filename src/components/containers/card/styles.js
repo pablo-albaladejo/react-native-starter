@@ -5,7 +5,7 @@ import { GlobalStyles } from '../../../styles';
 export default StyleSheet.create({
   container: {
     width: '100%',
-    paddingHorizontal: 8
+    padding: 8
   },
   content: {
     padding: 8,

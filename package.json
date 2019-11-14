@@ -12,6 +12,7 @@
     "@react-native-community/async-storage": "^1.6.2",
     "react": "16.8.6",
     "react-native": "0.60.5",
+    "react-native-datepicker-modal": "https://github.com/pablo-albaladejo/react-native-datepicker-modal.git",
     "react-native-gesture-handler": "^1.5.0",
     "react-native-reanimated": "^1.4.0",
     "react-native-root-toast": "^3.2.0",

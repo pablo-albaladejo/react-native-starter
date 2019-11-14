@@ -42,31 +42,56 @@ class MainScreen extends Component {
     );
   }
 
+  showDatePicker = () => {
+    this.props.onDatePickerOpen(
+      {
+        date: new Date (),
+        onSubmit: () => console.log('submit'),
+        onClose: () => console.log('close'),
+      }
+    );
+  }
+
   render() {
     return (
       <MainLayout>
         <View style={styles.container}>
 
           <Card>
-            <BasicButton
-              caption={'Navigate'}
-              onPress={this.navigate}
-            />
+            <View>
+              <BasicButton
+                caption={'Navigate'}
+                onPress={this.navigate}
+              />
 
-            <BasicButton
-              caption={'TabsView'}
-              onPress={this.navigateTabsView}
-            />
+              <BasicButton
+                caption={'TabsView'}
+                onPress={this.navigateTabsView}
+              />
+            </View>
+          </Card>
 
-            <BasicButton
-              caption={'Modal'}
-              onPress={this.showModal}
-            />
+          <Card>
+            <View>
+              <BasicButton
+                caption={'Modal'}
+                onPress={this.showModal}
+              />
 
-            <BasicButton
-              caption={'Toast'}
-              onPress={this.showToast}
-            />
+              <BasicButton
+                caption={'Toast'}
+                onPress={this.showToast}
+              />
+            </View>
+          </Card>
+
+          <Card>
+            <View>
+              <BasicButton
+                caption={'Date picker'}
+                onPress={this.showDatePicker}
+              />
+            </View>
           </Card>
 
         </View>
@@ -78,7 +103,8 @@ class MainScreen extends Component {
 MainScreen.propTypes = {
   navigation: PropTypes.object,
   onModalOpen: PropTypes.func,
-  onToastOpen: PropTypes.func
+  onToastOpen: PropTypes.func,
+  onDatePickerOpen: PropTypes.func
 }
 
 export default MainScreen;
