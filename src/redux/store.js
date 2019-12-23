@@ -15,7 +15,8 @@ import rootSaga from './saga';
 //Setup the persistion
 const persistConfig = {
   key: 'root',
-  storage: AsyncStorage
+  storage: AsyncStorage,
+  blacklist: ['ui', 'loading']
 };
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
